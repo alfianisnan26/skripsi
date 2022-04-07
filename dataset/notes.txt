@@ -1,0 +1,2 @@
+python detect.py --weights .\runs\train\robo4_epoch150_s2\weights\last.pt --source .\runs\test.mp4 --iou-thres 0.3 --conf-thres 0.6
+python detect.py --weights .\runs\train\robo4_epoch150_s2\weights\last.pt --source 0 --iou-thres 0.3 --conf-thres 0.6
