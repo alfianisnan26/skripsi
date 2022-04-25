@@ -1,2 +1,8 @@
-python detect.py --weights .\runs\train\robo4_epoch150_s2\weights\last.pt --source .\runs\test.mp4 --iou-thres 0.3 --conf-thres 0.6
+# Data Training
+python train.py --img 416 --batch 16 --epochs 150 --data data.yaml --cfg yolov5s.yaml --name final_training
+
+# Deploy with video
+python detect.py --weights .\runs\train\robo4_epoch150_s2\weights\best.pt --source .\runs\test2.mp4 --iou-thres 0.3 --conf-thres 0.6
+
+# Deploy with video stream (webcam)
 python detect.py --weights .\runs\train\robo4_epoch150_s2\weights\last.pt --source 0 --iou-thres 0.3 --conf-thres 0.6
